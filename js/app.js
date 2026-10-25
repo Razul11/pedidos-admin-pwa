@@ -253,12 +253,20 @@ function solicitarPermisoNotificaciones() {
     }
 }
 
-function lanzarNotificacion(titulo, cuerpo) {
+async function lanzarNotificacion(titulo, cuerpo) {
     if ("Notification" in window && Notification.permission === "granted") {
-        new Notification(titulo, {
+        const opciones = {
             body: cuerpo,
-            icon: "/app-admin/icons/icon512_rounded.png"
-        });
+            icon: "/icons/icon512_rounded.png",
+            badge: "/icons/icon_badge.png"
+        };
+        // Comprobar si el Service Worker está activo y usarlo para disparar la alerta
+        if ("serviceWorker" in navigator) {
+            const registroSW = await navigator.serviceWorker.ready;
+            registroSW.showNotification(titulo, opciones);
+        } else {
+            new Notification(titulo, opciones);
+        }
     }
 }
 

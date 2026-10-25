@@ -22,7 +22,7 @@
     "description": "Aplicación para los admin destinada a administrar los pedidos ",
     "name": "Sistema Pedidos - Admin",
     "short_name": "Pedidos - Admin",
-    "start_url": "/app-admin/index.html",
+    "start_url": "/index.html",
     "scope": "/",
-    "id": "/app-admin/index.html"
+    "id": "/index.html"
 }
