@@ -126,7 +126,7 @@ function renderizarPedidos() {
         const fechaMostrar = pedido.fechaStr || "Fecha no especificada";
 
         const tarjeta = document.createElement("div");
-        tarjeta.className = `card card-body border-0 shadow-sm mb-3 rounded-4 p-3 ${esEntregado ? 'bg-light opacity-75' : ''}`;
+        tarjeta.className = `card card-body border-1 shadow-sm mb-3 rounded-4 p-3 ${esEntregado ? 'bg-light opacity-75' : ''}`;
         tarjeta.innerHTML = `
             <div class="d-flex justify-content-between align-items-start mb-3">
                 <div>
