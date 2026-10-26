@@ -258,7 +258,7 @@ async function lanzarNotificacion(titulo, cuerpo) {
         const opciones = {
             body: cuerpo,
             icon: "/icons/icon512_rounded.png",
-            badge: "/icons/icon_badge.jpg"
+            badge: "/icons/icon_badge.png"
         };
         // Comprobar si el Service Worker está activo y usarlo para disparar la alerta
         if ("serviceWorker" in navigator) {
